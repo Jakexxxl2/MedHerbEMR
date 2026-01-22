@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.visitRouter = void 0;
+const express_1 = require("express");
+const visit_controller_js_1 = require("./visit.controller.js");
+exports.visitRouter = (0, express_1.Router)();
+exports.visitRouter.get("/", visit_controller_js_1.handleListVisits);
+exports.visitRouter.post("/", visit_controller_js_1.handleCreateVisit);
+exports.visitRouter.put("/:id", visit_controller_js_1.handleUpdateVisit);
+exports.visitRouter.delete("/:id", visit_controller_js_1.handleDeleteVisit);

@@ -1,0 +1,26 @@
+{
+  "name": "medherb-emr",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MedHerbEMR - TCM Clinic Electronic Medical Records System",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "start": "pnpm -r --parallel start",
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api dev",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^9.25.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.7.0"
+  }
+}
+
+
